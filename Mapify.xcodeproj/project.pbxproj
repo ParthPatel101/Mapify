@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		516490B027997A4700CF8AF0 /* LocationPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516490AF27997A4700CF8AF0 /* LocationPreviewView.swift */; };
+		516490B2279985FF00CF8AF0 /* LocationMapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516490B1279985FF00CF8AF0 /* LocationMapAnnotationView.swift */; };
 		51F1610827981D3600690433 /* MapifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1610727981D3600690433 /* MapifyApp.swift */; };
 		51F1610A27981D3600690433 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1610927981D3600690433 /* ContentView.swift */; };
 		51F1610C27981D3700690433 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51F1610B27981D3700690433 /* Assets.xcassets */; };
@@ -14,6 +16,11 @@
 		51F1611927981D3700690433 /* MapifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1611827981D3700690433 /* MapifyTests.swift */; };
 		51F1612327981D3700690433 /* MapifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1612227981D3700690433 /* MapifyUITests.swift */; };
 		51F1612527981D3700690433 /* MapifyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1612427981D3700690433 /* MapifyUITestsLaunchTests.swift */; };
+		51F1613227981D5E00690433 /* LocationsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1613127981D5E00690433 /* LocationsDataService.swift */; };
+		51F1613727981F0C00690433 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1613627981F0C00690433 /* Location.swift */; };
+		51F1613A2798238700690433 /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F161392798238700690433 /* LocationsView.swift */; };
+		51F1613C279823A500690433 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1613B279823A500690433 /* LocationsViewModel.swift */; };
+		51F1613E27982DB600690433 /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1613D27982DB600690433 /* LocationsListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		516490AF27997A4700CF8AF0 /* LocationPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreviewView.swift; sourceTree = "<group>"; };
+		516490B1279985FF00CF8AF0 /* LocationMapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapAnnotationView.swift; sourceTree = "<group>"; };
 		51F1610427981D3600690433 /* Mapify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mapify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51F1610727981D3600690433 /* MapifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapifyApp.swift; sourceTree = "<group>"; };
 		51F1610927981D3600690433 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +53,11 @@
 		51F1611E27981D3700690433 /* MapifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51F1612227981D3700690433 /* MapifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapifyUITests.swift; sourceTree = "<group>"; };
 		51F1612427981D3700690433 /* MapifyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapifyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		51F1613127981D5E00690433 /* LocationsDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDataService.swift; sourceTree = "<group>"; };
+		51F1613627981F0C00690433 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		51F161392798238700690433 /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
+		51F1613B279823A500690433 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
+		51F1613D27982DB600690433 /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +110,10 @@
 			children = (
 				51F1610727981D3600690433 /* MapifyApp.swift */,
 				51F1610927981D3600690433 /* ContentView.swift */,
+				51F1613827981F9D00690433 /* Data Services */,
+				51F1613327981ECB00690433 /* Models */,
+				51F1613427981ED700690433 /* Views */,
+				51F1613527981EDC00690433 /* ViewModels */,
 				51F1610B27981D3700690433 /* Assets.xcassets */,
 				51F1610D27981D3700690433 /* Preview Content */,
 			);
@@ -125,6 +143,41 @@
 				51F1612427981D3700690433 /* MapifyUITestsLaunchTests.swift */,
 			);
 			path = MapifyUITests;
+			sourceTree = "<group>";
+		};
+		51F1613327981ECB00690433 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				51F1613627981F0C00690433 /* Location.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		51F1613427981ED700690433 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				51F161392798238700690433 /* LocationsView.swift */,
+				516490B1279985FF00CF8AF0 /* LocationMapAnnotationView.swift */,
+				516490AF27997A4700CF8AF0 /* LocationPreviewView.swift */,
+				51F1613D27982DB600690433 /* LocationsListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		51F1613527981EDC00690433 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				51F1613B279823A500690433 /* LocationsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		51F1613827981F9D00690433 /* Data Services */ = {
+			isa = PBXGroup;
+			children = (
+				51F1613127981D5E00690433 /* LocationsDataService.swift */,
+			);
+			path = "Data Services";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +311,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				51F1610A27981D3600690433 /* ContentView.swift in Sources */,
+				516490B2279985FF00CF8AF0 /* LocationMapAnnotationView.swift in Sources */,
+				51F1613E27982DB600690433 /* LocationsListView.swift in Sources */,
+				516490B027997A4700CF8AF0 /* LocationPreviewView.swift in Sources */,
+				51F1613C279823A500690433 /* LocationsViewModel.swift in Sources */,
 				51F1610827981D3600690433 /* MapifyApp.swift in Sources */,
+				51F1613A2798238700690433 /* LocationsView.swift in Sources */,
+				51F1613727981F0C00690433 /* Location.swift in Sources */,
+				51F1613227981D5E00690433 /* LocationsDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
