@@ -7,15 +7,15 @@
 
 import SwiftUI
 
- @main
+@main
 struct MapifyApp: App {
     
     @StateObject private var viewModel = LocationsViewsModel()
     
     var body: some Scene {
         WindowGroup {
-            LocationsView()
-                .environmentObject(viewModel)
+            HomeView()
+                
         }
     }
 }

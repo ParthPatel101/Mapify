@@ -17,7 +17,7 @@ struct LocationPreviewView: View {
                 textSection
             }
             VStack (spacing: 8) {
-               learnMoreButton
+                learnMoreButton
                 nextButton
                 
             }
@@ -47,8 +47,10 @@ extension LocationPreviewView{
                 Image(imageName)
                     .resizable()
                     .scaledToFit()
+                
                     .frame(width: 100, height: 100)
                     .cornerRadius(10)
+                
             }
         }
         .padding(6)
@@ -69,12 +71,13 @@ extension LocationPreviewView{
     
     private var learnMoreButton: some View {
         Button {
-            
+            viewModel.sheetLocation = location
         } label: {
             Text("Learn More")
                 .font(.headline)
                 .frame(width: 125, height: 35)
         } .buttonStyle(.borderedProminent)
+        
     }
     
     private var nextButton: some View {
@@ -85,6 +88,6 @@ extension LocationPreviewView{
                 .font(.headline)
                 .frame(width: 125, height: 35)
         } .buttonStyle(.bordered)
-
+        
     }
 }

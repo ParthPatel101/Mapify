@@ -10,7 +10,7 @@ import MapKit
 import SwiftUI
 
 class LocationsViewsModel: ObservableObject {
-    
+    @Published var sheetLocation: Location? = nil
     @Published var locations: [Location]
     @Published var mapLocation: Location {
         didSet {
@@ -35,7 +35,7 @@ class LocationsViewsModel: ObservableObject {
         }
     }
     
-     func showLocationList() {
+    func showLocationList() {
         withAnimation(.easeInOut) {
             showList.toggle()
         }
@@ -48,7 +48,7 @@ class LocationsViewsModel: ObservableObject {
     }
     func nextButtonPress() {
         guard let current = locations.firstIndex(where: {$0 == mapLocation}) else {print("ERROR"); return}
-     let next = current + 1
+        let next = current + 1
         guard locations.indices.contains(next) else {
             guard let first = locations.first else {return}
             showNextLocation(location: first)

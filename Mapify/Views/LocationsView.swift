@@ -20,44 +20,47 @@ struct LocationsView: View {
                 if showingMapView {
                     map
                         .badge(5)
-                    .tabItem() {
+                        .tabItem() {
                             Button {
                                 
                             } label: {
                                 Image(systemName: "map")
                             }
-
-                            }
+                            
+                        }
                 }
                 else {
                     LocationsListView(viewModel: _viewModel)
                         .padding(.top, 30)
                         .badge(5)
                         .tabItem() {
-                                Button {
-                                    
-                                } label: {
-                                    Image(systemName: "list.dash")
-                                }
-
-                                }
+                            Button {
+                                
+                            } label: {
+                                Image(systemName: "list.dash")
+                            }
+                            
+                        }
                 }
             }
-                
-                VStack {
-                    Picker(selection: $showingMapView, label: Text("Picker")) {
-                        Text("Map View").tag(true)
-                        Text("List View").tag(false)
-                    }.pickerStyle(SegmentedPickerStyle())
-                    Spacer()
-                    }
-                
             
-            
+            VStack {
+                Picker(selection: $showingMapView, label: Text("Picker")) {
+                    Text("Map View").tag(true)
+                    Text("List View").tag(false)
+                }.pickerStyle(SegmentedPickerStyle()) .padding(.horizontal, 50)
+                Spacer()
             }
+            
+            
+            
+        } .sheet(item: $viewModel.sheetLocation, onDismiss: nil) { location in
+            LocationInfoView(location: location)            
+            
         }
-        
     }
+    
+}
 
 struct LocationsView_Previews: PreviewProvider {
     static var previews: some View {
@@ -107,14 +110,14 @@ extension LocationsView {
     private var header: some View {
         VStack {
             Text(viewModel.mapLocation.name)
-                        .font(.title2)
-                        .fontWeight(.black)
-                        .foregroundColor(.primary)
-                        .frame(height: 55)
-                        .frame(maxWidth: .infinity)
-                        .background(.thickMaterial)
-                        .cornerRadius(10)
-                    .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 15)
+                .font(.title2)
+                .fontWeight(.black)
+                .foregroundColor(.primary)
+                .frame(height: 55)
+                .frame(maxWidth: .infinity)
+                .background(.thickMaterial)
+                .cornerRadius(10)
+                .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 15)
         }
         .padding(.top)
     }

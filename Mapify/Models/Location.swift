@@ -10,7 +10,7 @@ import MapKit
 
 struct Location: Identifiable, Equatable {
     let name: String
-    let cityName: String
+    var cityName: String
     let coordinates: CLLocationCoordinate2D
     let description: String
     let imageNames: [String]

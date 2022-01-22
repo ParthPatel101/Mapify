@@ -13,16 +13,23 @@ struct LocationsListView: View {
         List {
             ForEach(viewModel.locations) { location in
                 Button {
-                    viewModel.showNextLocation(location: location )
+                    viewModel.sheetLocation = location
                 } label: {
-                    listRowView(location: location)
-                        .padding(.vertical, 4)
-                        .listRowBackground(Color.clear)
+                    HStack {
+                        Image(location.imageNames.first!)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width:100, height: 100)
+                            .cornerRadius(10)
+                            .shadow(radius: 10)
+                        Text(location.name)
+                            .font(.headline)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
                 }
-
-                
             }
-        } .listStyle(.plain)
+        }
+        .listStyle(.plain)
     }
 }
 
@@ -34,7 +41,7 @@ struct LocationsListView_Previews: PreviewProvider {
 }
 extension LocationsListView {
     
-      func listRowView(location: Location) -> some View {
+    func listRowView(location: Location) -> some View {
         HStack {
             if let imageName = location.imageNames.first {
                 Image(imageName)
